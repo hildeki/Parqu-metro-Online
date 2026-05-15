@@ -5,3 +5,11 @@
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
