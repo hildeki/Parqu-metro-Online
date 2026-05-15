@@ -36,3 +36,9 @@ table {
     border-collapse: collapse;
     font-size: 0.875rem;
 }
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #eeeeee;
+}
