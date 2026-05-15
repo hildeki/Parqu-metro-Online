@@ -37,3 +37,25 @@ class Parquimetro {
         }
     }
 }
+
+function calcular() {
+    const valor = parseFloat(document.getElementById("valor").value)
+    
+    if (isNaN(valor) || valor <0) {
+        document.getElementById("resultado").innerHTML = "Digite um valor válido!";
+        document.getElementById("resultado").className = "erro";
+        return;
+    }
+
+    const meuParquimetro = new Parquimetro(valor)
+    meuParquimetro.calcularTempo();
+    meuParquimetro.calcularTroco();
+    meuParquimetro.exibirResultado();
+    document.getElementById("valor").value = '';
+}
+
+document.addEventListener("keydown", function(evento) {
+    if (evento.key === "Enter") {
+        calcular();
+    }
+});
